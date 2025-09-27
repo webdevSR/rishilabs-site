@@ -3,40 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishi Labs | Coming Soon</title>
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5; 
-            color: #1c1e21; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        h1 { 
-            font-size: 48px; 
-            margin-bottom: 16px; 
-        }
-        p { 
-            font-size: 18px; 
-            color: #606770; 
-        }
-    </style>
+    <title>Rishi Labs - Tech Reviews and Guides</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Rishi Labs</h1>
-        <p>Our new, high-speed website is under construction. <br>Exciting reviews and content coming soon!</p>
-    </div>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Rishi Labs</a>
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome to the Lab.</h1>
+            <p>We test, analyze, and review the best tech products so you can make smarter choices. No fluff, just honest insights.</p>
+        </section>
+
+        <section class="blog-posts">
+            <h2>Latest Reviews</h2>
+            <div class="post-grid">
+                <a href="#" class="post-card">
+                    <img src="https://via.placeholder.com/400x200.png?text=Article+Image" alt="Article placeholder image">
+                    <h3>The 5 Best Mechanical Keyboards Under ₹3000</h3>
+                    <p>Discover the perfect budget keyboard for gaming and typing without breaking the bank...</p>
+                    <span class="read-more">Read More &rarr;</span>
+                </a>
+                <a href="#" class="post-card">
+                    <img src="https://via.placeholder.com/400x200.png?text=Article+Image" alt="Article placeholder image">
+                    <h3>Why Your Wrists Hurt: Top 3 Ergonomic Mice</h3>
+                    <p>Long hours at the desk? We tested the best ergonomic mice to save you from wrist pain...</p>
+                    <span class="read-more">Read More &rarr;</span>
+                </a>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rishi Labs. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
