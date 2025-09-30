@@ -181,18 +181,43 @@ footer {
 
 /* Media Query for Mobile Devices */
 /* Media Query for Mobile Devices */
+/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .main-nav {
-        display: none; /* Hide nav links by default on mobile */
-        position: absolute;
-        top: 65px; /* Position it right below the header */
+        position: fixed; /* Stays in place when scrolling */
+        top: 0;
         left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid #eaeaea;
-        padding: 10px 0;
+        height: 100vh; /* Full screen height */
+        width: 280px; /* Width of the side menu */
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items to the top */
+        padding-top: 80px; /* Space from the top */
+        
+        /* Hidden by default */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 15; /* Sits below the hamburger icon but above content */
     }
+
+    .hamburger-menu {
+        display: flex; /* Show the hamburger icon on mobile */
+    }
+
+    .main-nav.is-active {
+        /* Slides the menu into view */
+        transform: translateX(0);
+    }
+    
+    .main-nav.is-active a {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px 30px;
+        width: 100%;
+        text-align: left;
+    }
+}
 
     .hamburger-menu {
         display: flex; /* Show the hamburger icon on mobile */
