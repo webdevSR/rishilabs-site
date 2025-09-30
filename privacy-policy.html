@@ -11,11 +11,16 @@
     <header>
     <div class="container">
         <a href="/" class="logo">Rishi Labs</a>
-        <nav>
+        <nav class="main-nav">
             <a href="/">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <button class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 
@@ -203,5 +208,14 @@
         <p>&copy; 2025 Rishi Labs. All rights reserved.</p>
     </div>
 </footer>
+    <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.main-nav');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+    });
+</script>
 </body>
 </html>
