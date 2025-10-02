@@ -1,244 +1,50 @@
-/* Basic Reset & Setup */
-:root {
-    --primary-color: #0070f3;
-    --text-color: #333;
-    --bg-color: #f9f9f9;
-    --card-bg: #ffffff;
-    --border-color: #eaeaea;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: #f0f2f5; /* A fallback color */
-    background-image: linear-gradient(180deg, #e9ecef 0%, #f9f9f9 100%); /* The subtle gradient */
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background-color: #ffffff; /* Fallback for older browsers */
-    background-image: linear-gradient(to right, #ffffff 0%, #f0f2f5 100%);
-    border-bottom: 1px solid var(--border-color);
-    padding: 20px 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color); /* Uses our blue color variable */
-    text-decoration: none;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600; /* Makes nav links bolder */
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: var(--primary-color); /* Link turns blue on hover */
-}
-
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    margin: 30px 0;
-    border: 1px solid var(--border-color);
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-/* Blog Post Grid */
-.blog-posts h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-}
-
-.post-grid {
+/* Pros and Cons Section Styling */
+.pros-cons-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
 }
 
-.post-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.post-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.post-card h3, .post-card p {
-    padding: 0 20px;
-}
-
-.post-card h3 {
-    margin-top: 20px;
-}
-
-.post-card .read-more {
-    display: inline-block;
-    margin: 0 20px 20px 20px;
-    color: #ffffff;
-    background-color: var(--primary-color);
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.2s;
-}
-
-.post-card .read-more:hover {
-    background-color: #0056b3; /* A darker blue on hover */
-}
-
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 60px;
-    color: #666;
-}
-
-/* Affiliate Button Styling */
-.affiliate-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #ff9900; /* Amazon Orange */
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.2s;
-}
-
-.affiliate-button:hover {
-    background-color: #e68a00; /* Darker orange on hover */
-}
-/* Responsive Hamburger Menu */
-.hamburger-menu {
-    display: none; /* Hidden by default on desktop */
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.pros ul, .cons ul {
+    list-style: none;
     padding: 0;
-    z-index: 20;
+    margin: 0;
 }
 
-.hamburger-menu span {
-    width: 2rem;
-    height: 0.25rem;
-    background: #333;
-    border-radius: 10px;
-    transition: all 0.3s linear;
+.pros li, .cons li {
+    padding-left: 25px;
     position: relative;
-    transform-origin: 1px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
-/* Media Query for Mobile Devices */
-/* Media Query for Mobile Devices */
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .main-nav {
-        position: fixed; /* Stays in place when scrolling */
-        top: 0;
-        left: 0;
-        height: 100vh; /* Full screen height */
-        width: 280px; /* Width of the side menu */
-        background: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start; /* Align items to the top */
-        padding-top: 80px; /* Space from the top */
-        
-        /* Hidden by default */
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 15; /* Sits below the hamburger icon but above content */
-    }
-
-    .hamburger-menu {
-        display: flex; /* Show the hamburger icon on mobile */
-    }
-
-    .main-nav.is-active {
-        /* Slides the menu into view */
-        transform: translateX(0);
-    }
-    
-    .main-nav.is-active a {
-        font-size: 20px;
-        font-weight: 600;
-        padding: 15px 30px;
-        width: 100%;
-        text-align: left;
-    }
+.pros li::before {
+    content: '✓';
+    color: #28a745; /* Green checkmark */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
-    .hamburger-menu {
-        display: flex; /* Show the hamburger icon on mobile */
-    }
-
-    .main-nav.is-active {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center the links horizontally */
-        gap: 5px;
-    }
-    
-    .main-nav.is-active a {
-        font-size: 18px;
-        font-weight: 600;
-        padding: 10px 20px;
-        width: 100%;
-        text-align: center;
-    }
+.cons li::before {
+    content: '✗';
+    color: #dc3545; /* Red X */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
-    .main-nav.is-active a {
-        font-size: 24px;
+
+.pros-cons-container h4 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+    .pros-cons-container {
+        grid-template-columns: 1fr;
     }
 }
