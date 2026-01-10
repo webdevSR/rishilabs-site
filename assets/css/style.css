@@ -227,5 +227,72 @@ h1, h2, h3 {
 p, a, span {
   font-family: 'Inter', sans-serif;
 }
+/* PRICING */
+.pricing-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 10% 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.pricing-card {
+  background: linear-gradient(
+    180deg,
+    var(--brand-surface),
+    var(--brand-dark)
+  );
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+.pricing-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.pricing-card li {
+  margin-bottom: 12px;
+  color: #f1d9e6;
+}
+
+/* Highlighted Plan */
+.pricing-card.highlight {
+  border: 2px solid var(--brand-highlight);
+  transform: scale(1.05);
+}
+
+/* Pricing Note */
+.pricing-note {
+  text-align: center;
+  padding: 40px 10% 80px;
+  color: var(--text-muted);
+}
 
 
