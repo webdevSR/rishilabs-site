@@ -426,5 +426,41 @@ p, a, span {
     grid-template-columns: 1fr;
   }
 }
+/* CONTACT RIGHT CARD IMPROVEMENTS */
+.contact-card.secondary {
+  gap: 16px;
+}
+
+.contact-card.secondary h2 {
+  margin-bottom: 12px;
+}
+
+.contact-card.secondary p {
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.contact-trust {
+  margin-top: 24px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: #25D366; /* Official WhatsApp green */
+  color: #0b3d1e;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+}
+
 
 
