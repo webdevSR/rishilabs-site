@@ -199,20 +199,20 @@ p, a, span {
 }
 /* PRICING */
 .pricing-wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 60px 10% 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr); /* FORCE 3 COLUMNS */
+  gap: 32px;
+  align-items: stretch;
 }
 
 .pricing-card {
-  background: linear-gradient(
-    180deg,
-    var(--brand-surface),
-    var(--brand-dark)
-  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+};
   padding: 40px;
   border-radius: 20px;
   text-align: center;
@@ -537,5 +537,16 @@ p, a, span {
   opacity: 0.9;
 }
 
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 
