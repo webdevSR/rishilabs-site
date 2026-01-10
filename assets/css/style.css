@@ -408,59 +408,31 @@ p, a, span {
    ========================= */
 
 .pricing-wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 60px 10% 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr); /* FORCE 3 COLUMNS */
+  gap: 32px;
+  align-items: stretch;
 }
-
 .pricing-card {
-  background: var(--bg-soft);
-  padding: 40px;
-  border-radius: 24px;
-  border: 1px solid var(--border-light);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.pricing-card h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: var(--text-primary);
+@media (max-width: 640px) {
+  .pricing-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
-.price {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--text-primary);
-}
-
-.price span {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-muted);
-}
-
-.pricing-card ul {
-  list-style: none;
-  margin-bottom: 28px;
-  padding: 0;
-}
-
-.pricing-card li {
-  margin-bottom: 10px;
-  color: var(--text-muted);
-}
-
-/* Pricing Note */
-.pricing-note {
-  text-align: center;
-  padding: 40px 10% 80px;
-  color: var(--text-muted);
-}
 
 /* WHATSAPP BUTTON */
 /* WHATSAPP BUTTON */
@@ -537,16 +509,6 @@ p, a, span {
   opacity: 0.9;
 }
 
-@media (max-width: 1024px) {
-  .pricing-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 640px) {
-  .pricing-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
 
 
