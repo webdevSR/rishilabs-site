@@ -104,3 +104,29 @@ body {
   z-index: 999;
 }
 
+.page-hero {
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.page-hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  color: #94a3b8;
+}
+
+.service-section {
+  padding: 60px 10%;
+  display: grid;
+  gap: 30px;
+}
+
+.service-box {
+  background: #020617;
+  padding: 30px;
+  border-radius: 12px;
+}
+
