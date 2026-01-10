@@ -479,6 +479,30 @@ p, a, span {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
 }
+/* ===== FIX TEXT CONTRAST INSIDE CARDS ===== */
+
+/* Headings inside cards */
+.service-card h2,
+.service-card h3,
+.pricing-card h3,
+.contact-card h2 {
+  color: var(--text-primary);
+}
+
+/* Paragraphs inside cards */
+.service-card p,
+.pricing-card p,
+.contact-card p,
+.pricing-card li {
+  color: var(--text-muted);
+}
+
+/* Problem / Solution / Outcome text */
+.service-card .problem,
+.service-card .solution,
+.service-card .outcome {
+  color: var(--text-primary);
+}
 
 
 
