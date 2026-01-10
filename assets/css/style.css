@@ -504,5 +504,29 @@ p, a, span {
   color: var(--text-primary);
 }
 
+/* ===== HERO BUTTON ALIGNMENT FIX ===== */
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.cta-primary,
+.cta-secondary,
+.whatsapp-btn {
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 48px;
+}
 
 
