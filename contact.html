@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Rishi Labs</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Rishi Labs</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <header>
-    <div class="container">
-        <a href="/" class="logo">Rishi Labs</a>
-        <nav class="main-nav">
-            <a href="/">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <button class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</header>
-    <main class="container">
-        <article class="blog-post-content">
-            <h1>Get In Touch</h1>
-            <p>Have a question, a suggestion for a product we should test, or an opportunity to collaborate? We'd love to hear from you.</p>
-            <p>The best way to reach the lab is by email. We do our best to respond within 48 hours.</p>
-            <p><strong>Email:</strong> <a href="mailto:rigcorecontact@gmail.com">rigcorecontact@gmail.com</a></p>
-        </article>
-    </main>
-    <footer>
-    <div class="container">
-        <nav class="footer-nav">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="disclaimer.html">Disclaimer</a>
-        </nav>
-        <p>&copy; 2025 Rishi Labs. All rights reserved.</p>
-    </div>
-</footer>
-    <script>
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.main-nav');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('is-active');
-        navMenu.classList.toggle('is-active');
-    });
-</script>
+<header class="navbar">
+  <div class="logo">
+    Rishi<span>Labs</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h1>Let’s Build Something That Converts</h1>
+  <p>
+    Tell me a bit about your business and I’ll get back to you with
+    the best possible solution.
+  </p>
+</section>
+
+<section class="contact-wrapper">
+
+  <!-- FORM -->
+  <div class="contact-card">
+    <h2>Contact Form</h2>
+
+    <form action="https://wa.me/91YOURNUMBER" method="get" target="_blank">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" required />
+      <input type="email" name="email" placeholder="Email (optional)" />
+      <textarea name="message" rows="4" placeholder="Tell me about your business"></textarea>
+
+      <button type="submit" class="cta-primary">
+        Send on WhatsApp
+      </button>
+    </form>
+
+    <p class="contact-note">
+      I usually respond within a few hours.
+    </p>
+  </div>
+
+  <!-- INFO -->
+  <div class="contact-card secondary">
+    <h2>Prefer WhatsApp?</h2>
+    <p>
+      You can directly message me on WhatsApp for a quicker response.
+    </p>
+
+    <a
+      href="https://wa.me/91YOURNUMBER?text=Hi%20Rishi,%20I%20want%20help%20with%20website%20and%20marketing"
+      target="_blank"
+      class="cta-secondary"
+    >
+      WhatsApp Me
+    </a>
+
+    <div class="contact-trust">
+      <p>✔ No spam</p>
+      <p>✔ Free initial consultation</p>
+      <p>✔ Clear pricing & next steps</p>
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <p>© 2026 Rishi Labs. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+
