@@ -197,31 +197,6 @@ h1, h2, h3 {
 p, a, span {
   font-family: 'Inter', sans-serif;
 }
-.pricing-wrapper {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 10% 80px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* FORCE 3 COLUMNS */
-  gap: 32px;
-  align-items: stretch;
-}
-.pricing-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 1024px) {
-  .pricing-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .pricing-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* MOBILE FIXES */
 @media (max-width: 768px) {
@@ -466,6 +441,73 @@ p, a, span {
 
 .cta-primary:hover {
   opacity: 0.9;
+}
+/* =========================
+   PRICING – EDITORIAL CARDS
+   ========================= */
+
+.pricing-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.pricing-card {
+  background: var(--bg-soft);
+  padding: 40px 36px;
+  border-radius: 24px;
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TITLE */
+.pricing-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* PRICE */
+.pricing-card .price {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 12px 0 24px;
+}
+
+/* FEATURES */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.pricing-card li {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+/* BUTTON */
+.pricing-card .cta-primary {
+  align-self: center;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 
