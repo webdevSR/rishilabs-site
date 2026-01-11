@@ -2,29 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- MOBILE FIX -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
   <title>Contact | Rishi Labs</title>
 
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">
     Rishi<span>Labs</span>
   </div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/contact" class="active">Contact</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <h1>Let’s Build Something That Converts</h1>
   <p>
@@ -33,43 +42,44 @@
   </p>
 </section>
 
+<!-- CONTACT -->
 <section class="contact-wrapper">
 
-  <!-- FORM -->
+  <!-- FORM (EMAIL) -->
   <div class="contact-card">
     <h2>Contact Form</h2>
 
-    <form action="https://wa.me/919773072093" method="get" target="_blank">
+    <!-- FORM → EMAIL (Formspree) -->
+    <form action="https://formspree.io/f/XXXXYYYY" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
-      <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" required />
-      <input type="email" name="email" placeholder="Email (optional)" />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" required />
       <textarea name="message" rows="4" placeholder="Tell me about your business"></textarea>
 
       <button type="submit" class="cta-primary">
-        Send on WhatsApp
+        Send Message
       </button>
     </form>
 
     <p class="contact-note">
-      I usually respond within a few hours.
+      📩 Form submissions are sent directly to my email.
     </p>
   </div>
 
-  <!-- INFO -->
+  <!-- WHATSAPP -->
   <div class="contact-card secondary">
     <h2>Prefer WhatsApp?</h2>
     <p>
-      You can directly message me on WhatsApp for a quicker response.
+      Skip the form and message me directly on WhatsApp for a quicker response.
     </p>
 
     <a
-  href="https://wa.me/919773072093?text=Hi%20Rishi,%20I%20want%20help%20with%20website%20and%20marketing"
-  target="_blank"
-  class="whatsapp-btn"
->
-  WhatsApp Me
-</a>
-
+      href="https://wa.me/919773072093?text=Hi%20Rishi,%20I%20want%20help%20with%20website%20and%20marketing"
+      target="_blank"
+      class="whatsapp-btn"
+    >
+      WhatsApp Me
+    </a>
 
     <div class="contact-trust">
       <p>✔ No spam</p>
@@ -80,10 +90,10 @@
 
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-
