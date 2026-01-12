@@ -364,6 +364,52 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   CONTACT FORM – DESKTOP FIX
+   ========================= */
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #fff;
+  color: #111;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Focus state (premium feel) */
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: #e97b8f;
+  box-shadow: 0 0 0 3px rgba(233, 123, 143, 0.15);
+}
+
+/* Placeholder */
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: #999;
+}
+
+/* Small note spacing */
+.contact-note {
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 
 
