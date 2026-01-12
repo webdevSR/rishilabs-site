@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- MOBILE FIX -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Pricing | Rishi Labs</title>
 
@@ -13,11 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="menu-close" onclick="toggleMenu()">✕</button>
@@ -31,31 +30,39 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
+
+  <!-- LOGO -->
   <div class="logo">
-  <span class="logo-main">Rishi Labs</span>
-  <span class="logo-sub">Performance Studio</span>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <span class="logo-main">Rishi Labs</span>
+    <span class="logo-sub">Performance Studio</span>
   </div>
 
-<nav class="nav-pill">
-  <a href="index.html" class="active">Home</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- DESKTOP NAV -->
+  <nav class="nav-pill">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- MOBILE TOGGLE -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 </header>
 
 <!-- HERO -->
 <section class="page-hero">
-  <h1>Simple, Transparent Pricing</h1>
-  <p>No fake discounts. No long-term lock-ins. Just pricing that makes sense.</p>
+  <h1 class="fade-up">Simple, Transparent Pricing</h1>
+  <p class="fade-up delay-1">
+    No fake discounts. No long-term lock-ins. Just pricing that makes sense.
+  </p>
 </section>
 
 <!-- PRICING -->
 <section class="pricing-wrapper">
 
   <!-- WEBSITE -->
-  <div class="pricing-card fade-up">
+  <div class="pricing-card hover-lift fade-up">
     <h3>High-Converting Website</h3>
     <p class="price">₹4,999 <span>/one-time</span></p>
 
@@ -66,11 +73,11 @@
       <li>✔ Basic SEO setup</li>
     </ul>
 
-    <a href="/contact" class="cta-primary">Get Started</a>
+    <a href="contact.html" class="cta-primary">Get Started</a>
   </div>
 
   <!-- PERFORMANCE MARKETING -->
-  <div class="pricing-card highlight">
+  <div class="pricing-card hover-lift fade-up delay-1">
     <h3>Performance Marketing</h3>
     <p class="price">₹8,000 <span>/month</span></p>
 
@@ -81,11 +88,11 @@
       <li>✔ Monthly performance report</li>
     </ul>
 
-    <a href="/contact" class="cta-primary">Book a Call</a>
+    <a href="contact.html" class="cta-primary">Book a Call</a>
   </div>
 
   <!-- AUTOMATION -->
-  <div class="pricing-card fade-up">
+  <div class="pricing-card hover-lift fade-up delay-2">
     <h3>WhatsApp Automation</h3>
     <p class="price">₹2,999 <span>/setup</span></p>
 
@@ -96,13 +103,13 @@
       <li>✔ Custom message flows</li>
     </ul>
 
-    <a href="/contact" class="cta-primary">Automate Now</a>
+    <a href="contact.html" class="cta-primary">Automate Now</a>
   </div>
 
 </section>
 
 <!-- NOTE -->
-<section class="pricing-note">
+<section class="pricing-note fade-up delay-2">
   <p>
     Need a custom plan or combo package?<br>
     <strong>Let’s talk and build something that fits your business.</strong>
@@ -113,6 +120,7 @@
 <footer class="footer">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
 </footer>
+
 <script>
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
@@ -121,4 +129,5 @@
 
 </body>
 </html>
+
 
