@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- MOBILE FIX (IMPORTANT) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- MOBILE SAFE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <title>Rishi Labs | Websites, Ads & Automation</title>
+  <title>Rishi Labs | Performance Studio</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="menu-close" onclick="toggleMenu()">✕</button>
@@ -31,18 +31,24 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-<div class="logo">
-  <span class="logo-main">Rishi Labs</span>
-  <span class="logo-sub">Performance Studio</span>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-</div>
 
-<nav class="nav-pill">
-  <a href="index.html" class="active">Home</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- LOGO -->
+  <div class="logo">
+    <span class="logo-main">Rishi Labs</span>
+    <span class="logo-sub">Performance Studio</span>
+  </div>
+
+  <!-- DESKTOP NAV -->
+  <nav class="nav-pill">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- MOBILE TOGGLE -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 </header>
 
 <!-- HERO -->
@@ -65,25 +71,24 @@
 <!-- VALUE SECTION -->
 <section class="services-wrapper">
 
-  <div class="service-card">
+  <div class="service-card hover-lift fade-up">
     <h2>⚡ Fast, Conversion-Focused Websites</h2>
     <p>
       Lightweight, mobile-first websites optimized to turn visitors into real inquiries.
-      Ideal for ads and local businesses.
     </p>
   </div>
 
-  <div class="service-card">
+  <div class="service-card hover-lift fade-up delay-1">
     <h2>📈 ROI-Driven Performance Marketing</h2>
     <p>
-      Google & Meta ads focused on leads and sales — not impressions or vanity metrics.
+      Google & Meta ads focused on leads and sales — not impressions.
     </p>
   </div>
 
-  <div class="service-card">
+  <div class="service-card hover-lift fade-up delay-2">
     <h2>🤖 WhatsApp Automation & Integrations</h2>
     <p>
-      Instant follow-ups, automated responses and CRM-ready lead handling so no lead goes cold.
+      Automated follow-ups and CRM-ready integrations so no lead goes cold.
     </p>
   </div>
 
@@ -93,6 +98,7 @@
 <footer class="footer">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
 </footer>
+
 <script>
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
@@ -101,3 +107,4 @@
 
 </body>
 </html>
+
