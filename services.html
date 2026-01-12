@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- MOBILE FIX -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +12,11 @@
 
   <title>Services | Rishi Labs</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="menu-close" onclick="toggleMenu()">✕</button>
@@ -31,48 +30,56 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-<div class="logo">
-  <span class="logo-main">Rishi Labs</span>
-  <span class="logo-sub">Performance Studio</span>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-</div>
 
-<nav class="nav-pill">
-  <a href="index.html" class="active">Home</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- LOGO -->
+  <div class="logo">
+    <span class="logo-main">Rishi Labs</span>
+    <span class="logo-sub">Performance Studio</span>
+  </div>
+
+  <!-- DESKTOP NAV -->
+  <nav class="nav-pill">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- MOBILE TOGGLE -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 </header>
 
 <!-- HERO -->
 <section class="page-hero">
-  <h1>Services That Drive Growth</h1>
-  <p>Everything you need to turn traffic into real business leads.</p>
+  <h1 class="fade-up">Services That Drive Growth</h1>
+  <p class="fade-up delay-1">
+    Everything you need to turn traffic into real business leads.
+  </p>
 </section>
 
 <!-- SERVICES -->
 <section class="services-wrapper">
 
-  <div class="service-card fade-up">
+  <div class="service-card hover-lift fade-up">
     <h2>🚀 High-Converting Websites</h2>
     <p><span class="tag problem">Problem</span> Most websites look good but don’t generate leads.</p>
-    <p><span class="tag solution">Solution</span> Fast, mobile-first websites designed specifically for conversions.</p>
+    <p><span class="tag solution">Solution</span> Fast, mobile-first websites designed for conversions.</p>
     <p><span class="tag outcome">Outcome</span> More inquiries, better ad performance, higher trust.</p>
   </div>
 
- <div class="service-card fade-up">
+  <div class="service-card hover-lift fade-up delay-1">
     <h2>📈 Performance Marketing</h2>
-    <p><span class="tag problem">Problem</span> Ads burn money without delivering ROI.</p>
-    <p><span class="tag solution">Solution</span> Google & Meta ads optimized for leads, not vanity metrics.</p>
-    <p><span class="tag outcome">Outcome</span> Lower cost per lead and predictable growth.</p>
+    <p><span class="tag problem">Problem</span> Ads burn money without ROI.</p>
+    <p><span class="tag solution">Solution</span> Google & Meta ads optimized for leads.</p>
+    <p><span class="tag outcome">Outcome</span> Predictable growth & lower CPL.</p>
   </div>
 
-  <div class="service-card fade-up">
+  <div class="service-card hover-lift fade-up delay-2">
     <h2>🤖 WhatsApp Automation</h2>
-    <p><span class="tag problem">Problem</span> Leads go cold due to delayed follow-ups.</p>
-    <p><span class="tag solution">Solution</span> Automated WhatsApp messages with CRM-ready integrations.</p>
-    <p><span class="tag outcome">Outcome</span> Faster responses and higher conversions.</p>
+    <p><span class="tag problem">Problem</span> Leads go cold due to slow follow-ups.</p>
+    <p><span class="tag solution">Solution</span> Automated WhatsApp & CRM-ready flows.</p>
+    <p><span class="tag outcome">Outcome</span> Faster responses & higher conversions.</p>
   </div>
 
 </section>
@@ -81,6 +88,7 @@
 <footer class="footer">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
 </footer>
+
 <script>
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
