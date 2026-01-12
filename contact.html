@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- MOBILE FIX -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact | Rishi Labs</title>
 
@@ -13,11 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="menu-close" onclick="toggleMenu()">✕</button>
@@ -31,24 +30,30 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="logo">
-  <span class="logo-main">Rishi Labs</span>
-  <span class="logo-sub">Performance Studio</span>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-</div>
 
-<nav class="nav-pill">
-  <a href="index.html" class="active">Home</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- LOGO -->
+  <div class="logo">
+    <span class="logo-main">Rishi Labs</span>
+    <span class="logo-sub">Performance Studio</span>
+  </div>
+
+  <!-- DESKTOP NAV -->
+  <nav class="nav-pill">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <!-- MOBILE TOGGLE -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 </header>
 
 <!-- HERO -->
 <section class="page-hero">
-  <h1>Let’s Build Something That Converts</h1>
-  <p>
+  <h1 class="fade-up">Let’s Build Something That Converts</h1>
+  <p class="fade-up delay-1">
     Tell me a bit about your business and I’ll get back to you with
     the best possible solution.
   </p>
@@ -57,32 +62,27 @@
 <!-- CONTACT -->
 <section class="contact-wrapper">
 
-  <!-- FORM (EMAIL) -->
-  <div class="contact-card fade-up">
-    <h2>Contact Form</h2>
+  <!-- FORM (OPTIONAL / SECONDARY) -->
+  <div class="contact-card hover-lift fade-up">
+    <h2>Share Your Requirement</h2>
 
-    <!-- FORM → EMAIL (Formspree) -->
-    <form action="https://formspree.io/f/XXXXYYYY" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <textarea name="message" rows="4" placeholder="Tell me about your business"></textarea>
+    <form>
+      <input type="text" placeholder="Your Name" />
+      <input type="tel" placeholder="Phone Number" />
+      <input type="email" placeholder="Email Address" />
+      <textarea rows="4" placeholder="Tell me about your business"></textarea>
 
-      <button type="submit" class="cta-primary">
-        Send Message
-      </button>
+      <p class="contact-note">
+        Prefer quick replies? WhatsApp works best.
+      </p>
     </form>
-
-    <p class="contact-note">
-      📩 Form submissions are sent directly to my email.
-    </p>
   </div>
 
-  <!-- WHATSAPP -->
-  <div class="contact-card secondary fade-up delay-1">
-    <h2>Prefer WhatsApp?</h2>
+  <!-- WHATSAPP (PRIMARY) -->
+  <div class="contact-card secondary hover-lift fade-up delay-1">
+    <h2>Chat on WhatsApp</h2>
     <p>
-      Skip the form and message me directly on WhatsApp for a quicker response.
+      Skip forms. Message me directly on WhatsApp and let’s discuss your goals.
     </p>
 
     <a
@@ -94,9 +94,9 @@
     </a>
 
     <div class="contact-trust">
-      <p>✔ No spam</p>
+      <p>✔ Fast response</p>
       <p>✔ Free initial consultation</p>
-      <p>✔ Clear pricing & next steps</p>
+      <p>✔ Clear next steps</p>
     </div>
   </div>
 
@@ -106,6 +106,7 @@
 <footer class="footer">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
 </footer>
+
 <script>
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
@@ -114,3 +115,4 @@
 
 </body>
 </html>
+
