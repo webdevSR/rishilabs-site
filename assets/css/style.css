@@ -380,6 +380,23 @@ h1, h2, h3 {
   background: var(--bg-accent);
   opacity: 1;
 }
+/* ===== SCROLL ANIMATIONS ===== */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
