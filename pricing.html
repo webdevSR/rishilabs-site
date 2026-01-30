@@ -2,132 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Pricing | Rishi Labs</title>
-
-  <!-- FONTS -->
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Transparent pricing for website development, performance marketing, and WhatsApp automation. No hidden fees. Plans start at ₹2,999." />
+  <meta name="keywords" content="website pricing, digital marketing pricing, WhatsApp automation cost, affordable web development" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pricing | Rishi Labs" />
+  <meta property="og:description" content="Simple, transparent pricing with no long-term contracts. Get started from ₹2,999." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+  
+  <title>Pricing | Rishi Labs - Transparent & Affordable</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="menu-close" onclick="toggleMenu()">✕</button>
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu">
+  <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">✕</button>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="pricing.html">Pricing</a>
+    <a href="pricing.html" aria-current="page">Pricing</a>
     <a href="contact.html">Contact</a>
   </nav>
 </div>
 
 <!-- NAVBAR -->
-<header class="navbar">
-
-  <!-- LOGO -->
-  <div class="logo">
+<header class="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="Rishi Labs home">
     <span class="logo-main">Rishi Labs</span>
     <span class="logo-sub">Performance Studio</span>
-  </div>
-
-  <!-- DESKTOP NAV -->
-  <nav class="nav-pill">
+  </a>
+  
+  <nav class="nav-pill" role="navigation" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="pricing.html" class="active">Pricing</a>
+    <a href="pricing.html" class="active" aria-current="page">Pricing</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <!-- MOBILE TOGGLE -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
+  
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    ☰
+  </button>
 </header>
 
 <!-- HERO -->
-<section class="page-hero">
+<section class="page-hero" role="banner">
   <h1 class="fade-up">Simple, Transparent Pricing</h1>
   <p class="fade-up delay-1">
     No fake discounts. No long-term lock-ins. Just pricing that makes sense.
   </p>
 </section>
 
-<!-- PRICING -->
-<section class="pricing-wrapper">
-
-  <!-- WEBSITE -->
-  <div class="pricing-card hover-lift fade-up">
-    <h3>High-Converting Website</h3>
-    <p class="price">₹4,999 <span>/one-time</span></p>
-
-    <ul>
+<!-- PRICING CARDS -->
+<section class="pricing-wrapper" role="region" aria-label="Pricing plans">
+  
+  <!-- WEBSITE PACKAGE -->
+  <article class="pricing-card hover-lift fade-up">
+    <div class="pricing-header">
+      <h3>High-Converting Website</h3>
+      <p class="price">₹4,999 <span class="price-period">/one-time</span></p>
+    </div>
+    <ul class="pricing-features">
       <li>✔ High-converting landing website</li>
       <li>✔ Mobile-first & fast loading</li>
       <li>✔ WhatsApp & Call integration</li>
       <li>✔ Basic SEO setup</li>
+      <li>✔ Contact form integration</li>
+      <li>✔ 1 month support included</li>
     </ul>
-
-    <a href="contact.html" class="cta-primary">Get Started</a>
-  </div>
-
-  <!-- PERFORMANCE MARKETING -->
-  <div class="pricing-card hover-lift fade-up delay-1">
-    <h3>Performance Marketing</h3>
-    <p class="price">₹8,000 <span>/month</span></p>
-
-    <ul>
+    <a href="contact.html" class="cta-primary" aria-label="Get started with website package">Get Started</a>
+  </article>
+  
+  <!-- PERFORMANCE MARKETING PACKAGE -->
+  <article class="pricing-card featured hover-lift fade-up delay-1">
+    <div class="popular-badge">Most Popular</div>
+    <div class="pricing-header">
+      <h3>Performance Marketing</h3>
+      <p class="price">₹8,000 <span class="price-period">/month</span></p>
+    </div>
+    <ul class="pricing-features">
       <li>✔ Google / Meta ads setup</li>
       <li>✔ Conversion-focused strategy</li>
-      <li>✔ Weekly optimization</li>
+      <li>✔ Weekly optimization & testing</li>
       <li>✔ Monthly performance report</li>
+      <li>✔ Dedicated account manager</li>
+      <li>✔ No long-term contract</li>
     </ul>
-
-    <a href="contact.html" class="cta-primary">Book a Call</a>
-  </div>
-
-  <!-- AUTOMATION -->
-  <div class="pricing-card hover-lift fade-up delay-2">
-    <h3>WhatsApp Automation</h3>
-    <p class="price">₹2,999 <span>/setup</span></p>
-
-    <ul>
+    <a href="contact.html" class="cta-primary" aria-label="Book a call for performance marketing">Book a Call</a>
+  </article>
+  
+  <!-- AUTOMATION PACKAGE -->
+  <article class="pricing-card hover-lift fade-up delay-2">
+    <div class="pricing-header">
+      <h3>WhatsApp Automation</h3>
+      <p class="price">₹2,999 <span class="price-period">/setup</span></p>
+    </div>
+    <ul class="pricing-features">
       <li>✔ Instant lead follow-ups</li>
       <li>✔ Automated WhatsApp replies</li>
       <li>✔ Google Sheet / CRM ready</li>
       <li>✔ Custom message flows</li>
+      <li>✔ Testing & deployment</li>
+      <li>✔ 2 weeks support</li>
     </ul>
-
-    <a href="contact.html" class="cta-primary">Automate Now</a>
-  </div>
-
+    <a href="contact.html" class="cta-primary" aria-label="Get started with automation">Automate Now</a>
+  </article>
+  
 </section>
 
-<!-- NOTE -->
+<!-- CUSTOM PACKAGE NOTE -->
 <section class="pricing-note fade-up delay-2">
+  <h2>Need a Custom Package?</h2>
   <p>
-    Need a custom plan or combo package?<br>
-    <strong>Let’s talk and build something that fits your business.</strong>
+    Looking for a combo deal or have specific requirements?<br>
+    <strong>Let's chat and build a plan that perfectly fits your business goals.</strong>
   </p>
+  <a href="contact.html" class="cta-primary">Discuss Custom Plan</a>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <h2 class="fade-up">Frequently Asked Questions</h2>
+  <div class="faq-grid">
+    
+    <div class="faq-item fade-up delay-1">
+      <h3>Do I need to pay for ads separately?</h3>
+      <p>Yes, the ₹8,000/month is for management. Your ad spend (budget for Google/Meta) is separate and paid directly to the platforms.</p>
+    </div>
+    
+    <div class="faq-item fade-up delay-1">
+      <h3>Can I cancel anytime?</h3>
+      <p>Absolutely. No long-term contracts. Just give 30 days notice before the next billing cycle.</p>
+    </div>
+    
+    <div class="faq-item fade-up delay-2">
+      <h3>What if I need changes to my website later?</h3>
+      <p>Minor updates are free for the first month. After that, we charge ₹500-1,500 depending on the changes.</p>
+    </div>
+    
+    <div class="faq-item fade-up delay-2">
+      <h3>How quickly can you get started?</h3>
+      <p>Website projects start within 2-3 days. Marketing campaigns typically launch within a week after approval.</p>
+    </div>
+    
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
+  <p class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a> · 
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-  }
-</script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
-
-
