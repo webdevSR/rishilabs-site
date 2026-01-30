@@ -2,27 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- MOBILE SAFE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- FONTS -->
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Rishi Labs helps businesses grow with high-converting websites, performance marketing (Google & Meta ads), and WhatsApp automation. Get more leads today." />
+  <meta name="keywords" content="website development, performance marketing, Google ads, Meta ads, WhatsApp automation, lead generation, conversion optimization" />
+  <meta name="author" content="Rishi Labs" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rishi Labs | Performance Studio - Websites, Ads & Automation" />
+  <meta property="og:description" content="High-converting websites, ROI-driven marketing, and WhatsApp automation for businesses that want to grow." />
+  <meta property="og:url" content="https://rishilabs.com" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rishi Labs | Performance Studio" />
+  <meta name="twitter:description" content="Websites, Ads & Automation Built for Growth" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  
+  <!-- Fonts - Preload for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <title>Rishi Labs | Performance Studio</title>
-
+  
+  <title>Rishi Labs | Performance Studio - Websites, Ads & Automation</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="menu-close" onclick="toggleMenu()">✕</button>
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu">
+  <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">✕</button>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" aria-current="page">Home</a>
     <a href="services.html">Services</a>
     <a href="pricing.html">Pricing</a>
     <a href="contact.html">Contact</a>
@@ -30,81 +45,88 @@
 </div>
 
 <!-- NAVBAR -->
-<header class="navbar">
-
+<header class="navbar" role="banner">
   <!-- LOGO -->
-  <div class="logo">
+  <a href="index.html" class="logo" aria-label="Rishi Labs home">
     <span class="logo-main">Rishi Labs</span>
     <span class="logo-sub">Performance Studio</span>
-  </div>
-
+  </a>
+  
   <!-- DESKTOP NAV -->
-  <nav class="nav-pill">
-    <a href="index.html" class="active">Home</a>
+  <nav class="nav-pill" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="active" aria-current="page">Home</a>
     <a href="services.html">Services</a>
     <a href="pricing.html">Pricing</a>
     <a href="contact.html">Contact</a>
   </nav>
-
+  
   <!-- MOBILE TOGGLE -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    ☰
+  </button>
 </header>
 
 <!-- HERO -->
-<section class="page-hero">
+<section class="page-hero" role="banner">
   <h1 class="fade-up">
     Websites, Ads & Automation<br>Built for Growth
   </h1>
-
   <p class="fade-up delay-1">
     I help businesses generate consistent leads using high-converting websites,
     performance marketing & WhatsApp automation.
   </p>
-
   <div class="hero-buttons fade-up delay-2">
     <a href="contact.html" class="cta-primary">Get Free Consultation</a>
-    <a href="https://wa.me/919773072093" class="whatsapp-btn">WhatsApp Me</a>
+    <a href="https://wa.me/919773072093?text=Hi%20Rishi,%20I%27m%20interested%20in%20your%20services" 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer">
+      WhatsApp Me
+    </a>
   </div>
 </section>
 
-<!-- VALUE SECTION -->
-<section class="services-wrapper">
-
-  <div class="service-card hover-lift fade-up">
+<!-- VALUE PROPOSITION -->
+<section class="services-wrapper" role="region" aria-label="Our services">
+  <article class="service-card hover-lift fade-up">
     <h2>⚡ Fast, Conversion-Focused Websites</h2>
     <p>
       Lightweight, mobile-first websites optimized to turn visitors into real inquiries.
+      Built for speed, conversions, and search engines.
     </p>
-  </div>
-
-  <div class="service-card hover-lift fade-up delay-1">
+  </article>
+  
+  <article class="service-card hover-lift fade-up delay-1">
     <h2>📈 ROI-Driven Performance Marketing</h2>
     <p>
       Google & Meta ads focused on leads and sales — not impressions.
+      Data-driven strategies that actually grow your business.
     </p>
-  </div>
-
-  <div class="service-card hover-lift fade-up delay-2">
+  </article>
+  
+  <article class="service-card hover-lift fade-up delay-2">
     <h2>🤖 WhatsApp Automation & Integrations</h2>
     <p>
       Automated follow-ups and CRM-ready integrations so no lead goes cold.
+      Faster responses mean higher conversion rates.
     </p>
-  </div>
-
+  </article>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
+  <p class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a> · 
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-  }
-</script>
+<!-- JavaScript -->
+<script src="assets/js/main.js"></script>
+
+<!-- Analytics Placeholder - Add your Google Analytics tag here -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
 
 </body>
 </html>
-
