@@ -2,117 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Contact | Rishi Labs</title>
-
-  <!-- FONTS -->
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get in touch with Rishi Labs. Free consultation for website development, performance marketing, and WhatsApp automation." />
+  <meta name="keywords" content="contact Rishi Labs, free consultation, get a quote, website inquiry" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Rishi Labs" />
+  <meta property="og:description" content="Let's build something that converts. Get your free consultation today." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+  
+  <title>Contact | Rishi Labs - Get Your Free Consultation</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="menu-close" onclick="toggleMenu()">✕</button>
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu">
+  <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">✕</button>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" aria-current="page">Contact</a>
   </nav>
 </div>
 
 <!-- NAVBAR -->
-<header class="navbar">
-
-  <!-- LOGO -->
-  <div class="logo">
+<header class="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="Rishi Labs home">
     <span class="logo-main">Rishi Labs</span>
     <span class="logo-sub">Performance Studio</span>
-  </div>
-
-  <!-- DESKTOP NAV -->
-  <nav class="nav-pill">
+  </a>
+  
+  <nav class="nav-pill" role="navigation" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="pricing.html">Pricing</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html" class="active" aria-current="page">Contact</a>
   </nav>
-
-  <!-- MOBILE TOGGLE -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
+  
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    ☰
+  </button>
 </header>
 
 <!-- HERO -->
-<section class="page-hero">
-  <h1 class="fade-up">Let’s Build Something That Converts</h1>
+<section class="page-hero" role="banner">
+  <h1 class="fade-up">Let's Build Something That Converts</h1>
   <p class="fade-up delay-1">
-    Tell me a bit about your business and I’ll get back to you with
-    the best possible solution.
+    Tell me about your business and I'll get back to you with the best solution.
   </p>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-wrapper">
-
-  <!-- FORM (OPTIONAL / SECONDARY) -->
+<!-- CONTACT SECTION -->
+<section class="contact-wrapper" role="region" aria-label="Contact options">
+  
+  <!-- CONTACT FORM -->
   <div class="contact-card hover-lift fade-up">
-    <h2>Share Your Requirement</h2>
-
-    <form>
-      <input type="text" placeholder="Your Name" />
-      <input type="tel" placeholder="Phone Number" />
-      <input type="email" placeholder="Email Address" />
-      <textarea rows="4" placeholder="Tell me about your business"></textarea>
-
+    <h2>Share Your Requirements</h2>
+    
+    <!-- Form success/error messages -->
+    <div id="formMessage" class="form-message" style="display: none;"></div>
+    
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      
+      <!-- Web3Forms Access Key - Replace with your own from https://web3forms.com -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+      
+      <!-- Honeypot for spam prevention -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      
+      <!-- Form fields -->
+      <div class="form-group">
+        <input 
+          type="text" 
+          name="name" 
+          id="name"
+          placeholder="Your Name" 
+          required 
+          aria-label="Your name"
+          minlength="2"
+        />
+      </div>
+      
+      <div class="form-group">
+        <input 
+          type="tel" 
+          name="phone" 
+          id="phone"
+          placeholder="Phone Number" 
+          required 
+          aria-label="Your phone number"
+          pattern="[0-9]{10}"
+          title="Please enter a valid 10-digit phone number"
+        />
+      </div>
+      
+      <div class="form-group">
+        <input 
+          type="email" 
+          name="email" 
+          id="email"
+          placeholder="Email Address" 
+          required 
+          aria-label="Your email address"
+        />
+      </div>
+      
+      <div class="form-group">
+        <select name="service" id="service" required aria-label="Select service">
+          <option value="">Select Service *</option>
+          <option value="Website Development">Website Development</option>
+          <option value="Performance Marketing">Performance Marketing</option>
+          <option value="WhatsApp Automation">WhatsApp Automation</option>
+          <option value="Complete Package">Complete Package</option>
+          <option value="Other">Other / Custom</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <textarea 
+          name="message" 
+          id="message"
+          rows="4" 
+          placeholder="Tell me about your business and requirements"
+          required
+          aria-label="Your message"
+          minlength="10"
+        ></textarea>
+      </div>
+      
+      <button type="submit" class="cta-primary submit-btn" id="submitBtn">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loader" style="display: none;">Sending...</span>
+      </button>
+      
       <p class="contact-note">
-        Prefer quick replies? WhatsApp works best.
+        ⚡ Prefer quick replies? <a href="https://wa.me/919773072093" target="_blank" rel="noopener">WhatsApp works best</a>.
       </p>
     </form>
   </div>
-
-  <!-- WHATSAPP (PRIMARY) -->
+  
+  <!-- WHATSAPP CARD -->
   <div class="contact-card secondary hover-lift fade-up delay-1">
-    <h2>Chat on WhatsApp</h2>
+    <h2>💬 Chat on WhatsApp</h2>
     <p>
-      Skip forms. Message me directly on WhatsApp and let’s discuss your goals.
+      Skip the form. Message me directly on WhatsApp and let's discuss your goals in real-time.
     </p>
-
+    
     <a
       href="https://wa.me/919773072093?text=Hi%20Rishi,%20I%20want%20help%20with%20website%20and%20marketing"
       target="_blank"
+      rel="noopener noreferrer"
       class="whatsapp-btn"
+      aria-label="Contact via WhatsApp"
     >
-      WhatsApp Me
+      💬 WhatsApp Me Now
     </a>
-
+    
     <div class="contact-trust">
-      <p>✔ Fast response</p>
+      <h3>Why WhatsApp?</h3>
+      <p>✔ Instant responses (usually within 30 mins)</p>
       <p>✔ Free initial consultation</p>
-      <p>✔ Clear next steps</p>
+      <p>✔ Clear next steps and pricing</p>
+      <p>✔ Share examples & references easily</p>
+    </div>
+    
+    <div class="contact-info">
+      <h3>Other Ways to Reach</h3>
+      <p>📧 Email: <a href="mailto:hello@rishilabs.com">hello@rishilabs.com</a></p>
+      <p>📱 Phone: <a href="tel:+919773072093">+91 97730 72093</a></p>
     </div>
   </div>
-
+  
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <p>© 2026 Rishi Labs. All rights reserved.</p>
+  <p class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a> · 
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-  }
-</script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
-
